@@ -1,3 +1,5 @@
+name: ragflow
+
 services:
   es01:
     container_name: ragflow-es-01
