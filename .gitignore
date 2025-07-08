@@ -20,7 +20,6 @@ Cargo.lock
 *.trie
 
 .idea/
-.vscode/
 
 # Exclude Mac generated files
 .DS_Store
@@ -193,3 +192,4 @@ dist
 # SvelteKit build / generate output
 .svelte-kit
 
+ragflow.egg-info/

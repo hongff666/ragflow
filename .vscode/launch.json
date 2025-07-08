@@ -1,0 +1,53 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug ragflow_server",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/api/ragflow_server.py",
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "envFile": "${workspaceFolder}/docker/.env.debug",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}",
+        "LD_LIBRARY_PATH": "/usr/lib/x86_64-linux-gnu/",
+        "NLTK_DATA": "./nltk_data",
+        "http_proxy": "",
+        "https_proxy": "",
+        "no_proxy": "",
+        "HTTP_PROXY": "",
+        "HTTPS_PROXY": "",
+        "NO_PROXY": ""
+      }
+    },
+    {
+      "name": "Debug task_executor",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/rag/svr/task_executor.py",
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "args": ["${input:taskId}"],
+      "envFile": "${workspaceFolder}/docker/.env.debug",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}",
+        "LD_LIBRARY_PATH": "/usr/lib/x86_64-linux-gnu/",
+        "NLTK_DATA": "./nltk_data",
+        "http_proxy": "",
+        "https_proxy": "",
+        "no_proxy": "",
+        "HTTP_PROXY": "",
+        "HTTPS_PROXY": "",
+        "NO_PROXY": ""
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "id": "taskId",
+      "type": "promptString",
+      "description": "Enter the task ID to execute"
+    }
+  ]
+}

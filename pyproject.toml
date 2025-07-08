@@ -162,6 +162,7 @@ packages = [
     'api',
     'deepdoc',
     'graphrag',
+    'plugin',
     'intergrations.chatgpt-on-wechat.plugins',
     'mcp.server',
     'rag',
